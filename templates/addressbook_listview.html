@@ -1,8 +1,18 @@
 {% extends 'homepage.html' %}
 {% block content %}
-<ul>
-{% for contact in contacts %}
-    <li>{{ contact.name }} {{ contact.surname }}</li>
-{% endfor %}
-</ul>
+{#<ul>#}
+{#{% for contact in contacts %}#}
+{#    <li>{{ contact.name }} {{ contact.surname }}</li>#}
+{#{% endfor %}#}
+{#</ul>#}
+    <div class="card" style="width: 18rem;">
+    {% for contact in contacts %}
+        <div class="card-body">
+            <h5 class="card-title">{{ contact.name }} {{ contact.surname }}</h5>
+            <p class="card-text">{{ contact.phone }}</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}
