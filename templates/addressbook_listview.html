@@ -1,0 +1,32 @@
+{% extends 'homepage.html' %}
+{% block content %}
+
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacts' %}">View contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'addressbook' %}">Add contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mb-4 mt-4 align-items-center" style="width: 50%;">
+        <ul class="list-group list-group-horizontal">
+            {% for contact in contacts %}
+            <li class="list-group-item border-0">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ contact.name }} {{ contact.surname }}</h4>
+                        <p class="card-text">{{ contact.phone }}</p>
+                        <a href="" class="card-link">Edit</a>
+                        <a href="{% url 'delete' contact.id%}" class="card-link">Delete</a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
