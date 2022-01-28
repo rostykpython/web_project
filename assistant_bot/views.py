@@ -15,7 +15,7 @@ class AddressBookCreate(CreateView):
     model = AddressBook
     fields = "__all__"
     template_name = "addressbook_add.html"
-    success_url = reverse_lazy("homepage")
+    success_url = reverse_lazy("contacts")
 
 
 class AddressBookView(ListView):
