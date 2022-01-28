@@ -21,3 +21,4 @@ class AddressBookView(ListView):
     model = AddressBook
     template_name = 'addressbook_listview.html'
     context_object_name = 'contacts'
+
