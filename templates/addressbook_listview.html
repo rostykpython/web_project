@@ -1,0 +1,8 @@
+{% extends 'homepage.html' %}
+{% block content %}
+<ul>
+{% for contact in contacts %}
+    <li>{{ contact.name }} {{ contact.surname }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
