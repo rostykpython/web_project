@@ -21,8 +21,8 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ contact.name }} {{ contact.surname }}</h4>
                         <p class="card-text">{{ contact.phone }}</p>
-                        <a href="#" class="card-link">Edit</a>
-                        <a href="#" class="card-link">Delete</a>
+                        <a href="" class="card-link">Edit</a>
+                        <a href="{% url 'delete' contact.id%}" class="card-link">Delete</a>
                     </div>
                 </div>
             </li>
